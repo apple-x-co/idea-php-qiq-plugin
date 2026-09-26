@@ -1,3 +1,4 @@
+import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
 import org.jetbrains.intellij.platform.gradle.TestFrameworkType
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -50,8 +51,9 @@ configurations.named("testRuntimeOnly") {
 intellijPlatform {
     pluginVerification {
         ides {
-            ide(org.jetbrains.intellij.platform.gradle.IntelliJPlatformType.PhpStorm, "2024.2")
-            ide(org.jetbrains.intellij.platform.gradle.IntelliJPlatformType.PhpStorm, "2026.1")
+            create(IntelliJPlatformType.PhpStorm, "2024.2")
+            create(IntelliJPlatformType.PhpStorm, "2026.1")
+            create(IntelliJPlatformType.PhpStorm, "2026.2")
         }
     }
     pluginConfiguration {
@@ -60,7 +62,7 @@ intellijPlatform {
         version.set("1.0.0")
         ideaVersion {
             sinceBuild.set("241")
-            untilBuild.set("261.*")
+            untilBuild.set("262.*") // PhpStorm 2026.2
         }
         description.set(
             "Qiq template support for PhpStorm: HTML-aware syntax highlighting, full PHP " +
