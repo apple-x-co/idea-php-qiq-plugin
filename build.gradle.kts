@@ -54,6 +54,7 @@ intellijPlatform {
             create(IntelliJPlatformType.PhpStorm, "2024.2")
             create(IntelliJPlatformType.PhpStorm, "2026.1")
             create(IntelliJPlatformType.PhpStorm, "2026.2")
+            create(IntelliJPlatformType.PhpStorm, "2026.3")
         }
     }
     pluginConfiguration {
@@ -62,7 +63,7 @@ intellijPlatform {
         version.set("1.0.0")
         ideaVersion {
             sinceBuild.set("241")
-            untilBuild.set("262.*") // PhpStorm 2026.2
+            untilBuild.set("263.*") // PhpStorm 2026.3
         }
         description.set(
             "Qiq template support for PhpStorm: HTML-aware syntax highlighting, full PHP " +
